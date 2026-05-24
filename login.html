@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <title>
+    Login — VOLTIQ
+  </title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  />
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+
+  <section class="auth-wrap">
+
+    <div class="container">
+
+      <div
+        class="row justify-content-center"
+      >
+
+        <div class="col-lg-5 col-md-7">
+
+          <div class="auth-card">
+
+            <h2 class="mb-2">
+
+              Welcome Back ⚡
+
+            </h2>
+
+            <p class="sub">
+
+              Sign in to access your
+              cart, wishlist, and orders.
+
+            </p>
+
+            <div
+              class="alert alert-danger d-none"
+              id="errMsg"
+            ></div>
+
+            <form
+              id="loginForm"
+              autocomplete="off"
+            >
+
+              <div class="field">
+
+                <label>
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  id="lEmail"
+                  required
+                  data-testid="login-email"
+                />
+
+              </div>
+
+              <div class="field">
+
+                <label>
+                  Password
+                </label>
+
+                <input
+                  type="password"
+                  id="lPass"
+                  required
+                  data-testid="login-password"
+                />
+
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4"
+              >
+
+                <label
+                  style="
+                    color: var(--ink-mute);
+                    font-size: .9rem;
+                  "
+                >
+
+                  <input
+                    type="checkbox"
+                    class="me-1"
+                  />
+
+                  Remember me
+
+                </label>
+
+                <a
+                  href="#"
+                  style="
+                    color: var(--neon);
+                    font-size: .9rem;
+                  "
+                >
+
+                  Forgot password?
+
+                </a>
+
+              </div>
+
+              <button
+                type="submit"
+                class="btn-neon w-100"
+                data-testid="login-submit"
+              >
+
+                <i class="bi bi-box-arrow-in-right me-2"></i>
+
+                Sign In
+
+              </button>
+
+            </form>
+
+            <div
+              class="text-center mt-4"
+              style="
+                color: var(--ink-mute);
+              "
+            >
+
+              Don’t have an account?
+
+              <a
+                href="signup.html"
+                data-testid="goto-signup"
+                style="
+                  color: var(--neon);
+                "
+              >
+
+                Create one
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/data.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    const form =
+      document.getElementById(
+        "loginForm"
+      );
+
+    const errMsg =
+      document.getElementById(
+        "errMsg"
+      );
+
+    form.addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+        const email =
+          document
+            .getElementById(
+              "lEmail"
+            )
+            .value
+            .trim();
+
+        const password =
+          document
+            .getElementById(
+              "lPass"
+            )
+            .value;
+
+        const result =
+          login(
+            email,
+            password
+          );
+
+        if (!result.ok) {
+
+          errMsg.textContent =
+            result.msg;
+
+          errMsg.classList.remove(
+            "d-none"
+          );
+
+          return;
+        }
+
+        errMsg.classList.add(
+          "d-none"
+        );
+
+        toast(
+          "Signed in successfully ⚡"
+        );
+
+        setTimeout(() => {
+
+          location.href =
+            "/home.html";
+
+        }, 700);
+      }
+    );
+  </script>
+
+</body>
+</html>
