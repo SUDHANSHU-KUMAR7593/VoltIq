@@ -3,37 +3,37 @@ const CATEGORIES = [
     id: "Smartphones",
     name: "Smartphones",
     icon: "bi-phone",
-    count: 4
+    count: 6
   },
   {
     id: "Laptops",
     name: "Laptops",
     icon: "bi-laptop",
-    count: 4
+    count: 6
   },
   {
     id: "Audio",
     name: "Audio",
     icon: "bi-headphones",
-    count: 4
+    count: 6
   },
   {
     id: "Gaming",
     name: "Gaming",
     icon: "bi-controller",
-    count: 4
+    count: 6
   },
   {
     id: "Wearables",
     name: "Wearables",
     icon: "bi-smartwatch",
-    count: 3
+    count: 5
   },
   {
     id: "Accessories",
     name: "Accessories",
     icon: "bi-usb-symbol",
-    count: 4
+    count: 6
   }
 ];
 
@@ -673,6 +673,342 @@ const PRODUCTS = [
       Panel: "IPS",
       Ports: "USB-C + HDMI",
       Brightness: "350 nits"
+    }
+  },
+
+  {
+    id: 23,
+    name: "Samsung Galaxy Z Fold6",
+    brand: "Samsung",
+    category: "Smartphones",
+    price: 1899,
+    was: 2099,
+    rating: 4.8,
+    reviews: 96,
+    stock: 11,
+    badge: "new",
+    image:
+      "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=900&q=80",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&q=80"
+    ],
+    description:
+      "Foldable flagship smartphone with a large multitasking display and premium camera setup.",
+    specs: {
+      Display: "7.6-inch Flex OLED",
+      Processor: "Snapdragon 8 Gen 3",
+      Storage: "512GB",
+      Camera: "50MP Triple Camera",
+      Battery: "4400mAh"
+    }
+  },
+
+  {
+    id: 24,
+    name: "OnePlus Nord 4",
+    brand: "OnePlus",
+    category: "Smartphones",
+    price: 499,
+    was: 549,
+    rating: 4.3,
+    reviews: 76,
+    stock: 33,
+    badge: "hot",
+    image:
+      "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=900&q=80",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&q=80"
+    ],
+    description:
+      "Value-packed Android phone with a bright display, fast charging, and smooth performance.",
+    specs: {
+      Display: "6.74-inch AMOLED",
+      Processor: "Snapdragon 7+ Gen 3",
+      Storage: "256GB",
+      Camera: "50MP Dual Camera",
+      Battery: "5000mAh"
+    }
+  },
+
+  {
+    id: 25,
+    name: "ASUS Zenbook S16",
+    brand: "ASUS",
+    category: "Laptops",
+    price: 1699,
+    was: 1899,
+    rating: 4.8,
+    reviews: 88,
+    stock: 14,
+    badge: "new",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&q=80"
+    ],
+    description:
+      "Slim and sleek ultrabook with a high-resolution OLED panel and excellent portability.",
+    specs: {
+      Display: "16-inch OLED",
+      Processor: "Ryzen 9",
+      RAM: "32GB",
+      Storage: "1TB SSD",
+      GPU: "Integrated"
+    }
+  },
+
+  {
+    id: 26,
+    name: "Lenovo Yoga Slim 7",
+    brand: "Lenovo",
+    category: "Laptops",
+    price: 1199,
+    was: 1299,
+    rating: 4.6,
+    reviews: 67,
+    stock: 21,
+    badge: "hot",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&q=80"
+    ],
+    description:
+      "Convertible laptop built for productivity and entertainment with a crisp touchscreen display.",
+    specs: {
+      Display: "14-inch Touchscreen",
+      Processor: "Intel Core i7",
+      RAM: "16GB",
+      Storage: "512GB SSD",
+      Battery: "12 Hours"
+    }
+  },
+
+  {
+    id: 27,
+    name: "Sony WF-1000XM5",
+    brand: "Sony",
+    category: "Audio",
+    price: 279,
+    was: 329,
+    rating: 4.9,
+    reviews: 182,
+    stock: 28,
+    badge: "new",
+    image:
+      "https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=900&q=80",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=80"
+    ],
+    description:
+      "Compact true wireless earbuds with exceptional noise cancellation and rich detail.",
+    specs: {
+      Driver: "10mm",
+      Battery: "8 Hours",
+      Connectivity: "Bluetooth 5.3",
+      ANC: "Yes",
+      Charging: "USB-C"
+    }
+  },
+
+  {
+    id: 28,
+    name: "JBL Charge 5",
+    brand: "JBL",
+    category: "Audio",
+    price: 179,
+    was: 199,
+    rating: 4.6,
+    reviews: 164,
+    stock: 36,
+    badge: "hot",
+    image:
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=80",
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=900&q=80"
+    ],
+    description:
+      "Portable Bluetooth speaker with deep bass, waterproof design, and long playtime.",
+    specs: {
+      Power: "30W",
+      Battery: "20 Hours",
+      Waterproof: "IP67",
+      Connectivity: "Bluetooth 5.3",
+      Weight: "648g"
+    }
+  },
+
+  {
+    id: 29,
+    name: "Logitech G Pro X Superlight 2",
+    brand: "Logitech",
+    category: "Gaming",
+    price: 159,
+    was: 189,
+    rating: 4.8,
+    reviews: 98,
+    stock: 24,
+    badge: "new",
+    image:
+      "https://images.unsplash.com/photo-1527814050087-3793815479db?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1527814050087-3793815479db?w=900&q=80",
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=900&q=80"
+    ],
+    description:
+      "Ultra-lightweight wireless gaming mouse with precise tracking and a comfortable ergonomic shape.",
+    specs: {
+      DPI: "32000",
+      Battery: "70 Hours",
+      Connectivity: "2.4GHz",
+      Buttons: "5",
+      Weight: "60g"
+    }
+  },
+
+  {
+    id: 30,
+    name: "Razer Basilisk V3 Pro",
+    brand: "Razer",
+    category: "Gaming",
+    price: 129,
+    was: 149,
+    rating: 4.7,
+    reviews: 84,
+    stock: 27,
+    badge: "hot",
+    image:
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=900&q=80",
+      "https://images.unsplash.com/photo-1527814050087-3793815479db?w=900&q=80"
+    ],
+    description:
+      "High-performance wireless gaming mouse designed for precision and customizable controls.",
+    specs: {
+      DPI: "30000",
+      Battery: "90 Hours",
+      Connectivity: "2.4GHz + Bluetooth",
+      Buttons: "11",
+      Weight: "112g"
+    }
+  },
+
+  {
+    id: 31,
+    name: "Fitbit Versa 4",
+    brand: "Fitbit",
+    category: "Wearables",
+    price: 229,
+    was: 269,
+    rating: 4.5,
+    reviews: 118,
+    stock: 39,
+    badge: "new",
+    image:
+      "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=900&q=80",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80"
+    ],
+    description:
+      "Fitness-focused smartwatch with wellness insights, body metrics, and built-in GPS.",
+    specs: {
+      Display: "1.5-inch AMOLED",
+      Battery: "6 Days",
+      GPS: "Built-in",
+      Water: "5ATM",
+      Tracking: "Sleep + Stress"
+    }
+  },
+
+  {
+    id: 32,
+    name: "Samsung Galaxy Watch 7",
+    brand: "Samsung",
+    category: "Wearables",
+    price: 349,
+    was: 399,
+    rating: 4.7,
+    reviews: 103,
+    stock: 24,
+    badge: "hot",
+    image:
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80",
+      "https://images.unsplash.com/photo-1579357570404-c0277ccaea0d?w=900&q=80"
+    ],
+    description:
+      "Smartwatch with polished design, advanced fitness tracking, and seamless Samsung connectivity.",
+    specs: {
+      Display: "1.3-inch AMOLED",
+      Battery: "48 Hours",
+      Connectivity: "Bluetooth + WiFi",
+      Water: "5ATM",
+      Storage: "16GB"
+    }
+  },
+
+  {
+    id: 33,
+    name: "Anker 615 USB-C Charger",
+    brand: "Anker",
+    category: "Accessories",
+    price: 39,
+    was: 49,
+    rating: 4.6,
+    reviews: 142,
+    stock: 57,
+    badge: "new",
+    image:
+      "https://images.unsplash.com/photo-1597052382006-c375427a4d4f?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1597052382006-c375427a4d4f?w=900&q=80",
+      "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=900&q=80"
+    ],
+    description:
+      "Compact 65W GaN charger for fast, reliable charging on the go.",
+    specs: {
+      Output: "65W",
+      Ports: "USB-C + USB-A",
+      Material: "GaN",
+      Weight: "170g",
+      Safety: "Overcharge Protection"
+    }
+  },
+
+  {
+    id: 34,
+    name: "Logitech C920 HD Pro",
+    brand: "Logitech",
+    category: "Accessories",
+    price: 79,
+    was: 99,
+    rating: 4.5,
+    reviews: 121,
+    stock: 34,
+    badge: "hot",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80",
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=900&q=80"
+    ],
+    description:
+      "Full HD webcam for clear video calls, streaming, and online meetings.",
+    specs: {
+      Resolution: "1080p",
+      FrameRate: "30fps",
+      Microphone: "Dual",
+      Mount: "Flexible Clip",
+      Compatibility: "Windows + Mac"
     }
   }
 ];
