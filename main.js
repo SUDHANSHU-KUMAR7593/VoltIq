@@ -181,7 +181,7 @@ function logout() {
   setTimeout(() => {
 
     location.href =
-      "home.html";
+      "index.html";
 
   }, 400);
 }
@@ -595,7 +595,7 @@ function renderNavbar() {
         >
 
           <a
-            href="home.html"
+            href="index.html"
             class="brand"
           >
 
@@ -776,7 +776,7 @@ function renderFooter() {
           <div class="col-lg-4">
 
             <a
-              href="home.html"
+              href="index.html"
               class="brand"
             >
 
