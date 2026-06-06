@@ -9,7 +9,10 @@ function safeParse(value, fallback) {
 
   try {
 
-    return JSON.parse(value);
+    const parsed =
+      JSON.parse(value);
+
+    return parsed ?? fallback;
 
   } catch {
 
@@ -19,11 +22,13 @@ function safeParse(value, fallback) {
 
 function getCart() {
 
-  return safeParse(
-    localStorage.getItem(
-      STORAGE_KEYS.CART
-    ),
-    []
+  return (
+    safeParse(
+      localStorage.getItem(
+        STORAGE_KEYS.CART
+      ),
+      []
+    ) || []
   );
 }
 
@@ -39,11 +44,13 @@ function setCart(cart) {
 
 function getWish() {
 
-  return safeParse(
-    localStorage.getItem(
-      STORAGE_KEYS.WISHLIST
-    ),
-    []
+  return (
+    safeParse(
+      localStorage.getItem(
+        STORAGE_KEYS.WISHLIST
+      ),
+      []
+    ) || []
   );
 }
 
