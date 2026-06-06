@@ -21,15 +21,16 @@ function safeParse(value, fallback) {
 }
 
 function getCart() {
-
-  return (
-    safeParse(
-      localStorage.getItem(
-        STORAGE_KEYS.CART
-      ),
-      []
-    ) || []
+  const cart = safeParse(
+    localStorage.getItem(
+      STORAGE_KEYS.CART
+    ),
+    []
   );
+
+  return Array.isArray(cart)
+    ? cart
+    : [];
 }
 
 function setCart(cart) {
@@ -43,15 +44,16 @@ function setCart(cart) {
 }
 
 function getWish() {
-
-  return (
-    safeParse(
-      localStorage.getItem(
-        STORAGE_KEYS.WISHLIST
-      ),
-      []
-    ) || []
+  const wish = safeParse(
+    localStorage.getItem(
+      STORAGE_KEYS.WISHLIST
+    ),
+    []
   );
+
+  return Array.isArray(wish)
+    ? wish
+    : [];
 }
 
 function setWish(wishlist) {
@@ -331,11 +333,11 @@ function updateBadges() {
     );
 
   const cartCount =
-    getCart().reduce(
-      (sum, item) =>
-        sum + item.qty,
-      0
-    );
+  (getCart() || []).reduce(
+    (sum, item) =>
+      sum + item.qty,
+    0
+  );
 
   const wishCount =
     getWish().length;
@@ -443,9 +445,9 @@ function productCardHTML(
 ) {
 
   const wished =
-    getWish().includes(
-      product.id
-    );
+  (getWish() || []).includes(
+    product.id
+  );
 
   return `
     <div
