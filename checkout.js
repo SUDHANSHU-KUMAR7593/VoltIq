@@ -703,7 +703,7 @@ function placeOrder() {
     setCart([]);
 
     location.href =
-      `/success.html?id=${orderId}`;
+  "success.html?id=" + orderId;
 
   }, 1200);
 }
