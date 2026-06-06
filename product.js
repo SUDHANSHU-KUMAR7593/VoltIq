@@ -49,7 +49,7 @@ function renderBreadcrumb() {
       Back
     </button>
 
-    <a href="home.html">
+    <a href="index.html">
       Home
     </a>
 
@@ -115,7 +115,7 @@ function renderProductDetails() {
             src="${images[0]}"
             alt="${product.name}"
             loading="lazy"
-            onerror="this.src='/assets/fallback.png'"
+            onerror="this.src='assets/fallback.png'"
           />
 
         </div>
