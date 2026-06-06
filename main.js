@@ -902,7 +902,8 @@ function bindGlobalSearch() {
         if (!query) return;
 
         location.href =
-          `/shop.html?q=${encodeURIComponent(query)}`;
+  "shop.html?q=" +
+  encodeURIComponent(query);
       }
     }
   );
